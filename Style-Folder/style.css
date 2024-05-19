@@ -1,14 +1,17 @@
 :root {
   --hero-section: linear-gradient(90deg, #1e38a3, #021048);
 }
-
-body {
+* {
   font-family: "Oxygen", sans-serif;
-  color: white;
+}
+body {
+  color: #f7f7f8;
 }
 
 .navbar {
+  padding-left: 38px;
   background-color: white;
+  border-bottom: 2px solid gray;
 }
 .navbar-brand img {
   border-radius: 100px;
@@ -20,21 +23,243 @@ body {
   margin-left: 30px;
   color: #000000;
 }
+.drop-down a {
+  font-weight: bold;
+  color: #000000;
+}
 
 .nav-link:hover {
   color: #1e38a3;
 }
+.dropdown-menu a:hover {
+  color: #1e38a3;
+}
+/* Top Button */
+.top-button a {
+  color: #254ff8;
+  position: fixed;
+  font-size: 50px;
+  bottom: 20px;
+  right: 30px;
+}
+.top-button a:hover {
+  color: #1c39af;
+}
+/* Hero Section */
+.hero-parent {
+  display: flex;
+  height: auto;
+  padding: 50px;
+  background: var(--hero-section);
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
 
-.hero {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+.hero-parent .development-img {
+  width: 400px;
+  height: 400px;
+  align-items: center;
+}
+
+.hero-parent .hero-item h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-parent .hero-item p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.hero-parent .hero-button-1,
+.hero-button-2 {
+  background-color: #f7f7f8;
+  margin-right: 8px;
+  margin-top: 10px;
+  width: 200px;
+  height: 45px;
+  border: 0;
+  border-radius: 8px;
+}
+.hero-parent .hero-button-1 a,
+.hero-button-2 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #021149;
+}
+.hero-parent .hero-button-2 {
+  width: 150px;
+  height: 45px;
+}
+
+.hero-button-1:hover,
+.hero-button-2:hover {
+  background-color: rgb(225, 225, 225);
+  box-shadow: 0px 0px 5px 1px #f7f7f8;
+}
+/* About */
+.about-parent .about-item {
+  color: #000000;
+  padding: 50px;
+  font-weight: bold;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.about-parent .about-item h1 {
+  font-weight: bold;
+}
+.about-parent .about-item h4 {
+  font-weight: bold;
+  color: black;
+}
+
+/* Skills */
+
+.skills-parent {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  height: auto;
   background: var(--hero-section);
 }
-.item-1 {
-  font-size: 40px;
+
+.skills-parent .skills-item h1 {
+  color: white;
+  padding: 50px;
   font-weight: bold;
   text-align: center;
-  grid-column: 1/3;
-  grid-row: 3;
+}
+.skills-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-card-1,
+.skills-card-2,
+.skills-card-3,
+.skills-card-4 {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px #2b4094;
+  background-color: #2b4094;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills-card-1 img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 27px;
+}
+
+.skills-card-2 img {
+  width: 260px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.skills-card-3 img {
+  width: 100px;
+  height: auto;
+  margin-top: 18px;
+}
+
+.skills-card-4 img {
+  width: 170px;
+  height: auto;
+}
+
+.skills-card-1 p,
+.skills-card-2 p,
+.skills-card-3 p,
+.skills-card-4 p {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.skills-card-3 p {
+  margin-top: 54px;
+}
+.skills-card-4 p {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.skills-card-1:hover,
+.skills-card-2:hover,
+.skills-card-3:hover,
+.skills-card-4:hover {
+  width: 255px;
+  height: 255px;
+  box-shadow: 0px 0px 10px 5px #2752ff;
+}
+/* Project */
+.project-parent {
+  background-color: #eeeeee;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.project-parent .project-item h1 {
+  color: black;
+  padding: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4 {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px #2b4094;
+  background-color: #2b4094;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.project-card-1 p,
+.project-card-2 p,
+.project-card-3 p,
+.project-card-4 p {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.project-card-1:hover,
+.project-card-2:hover,
+.project-card-3:hover,
+.project-card-4:hover {
+  width: 255px;
+  height: 255px;
+  box-shadow: 0px 0px 10px 5px #001668;
+}
+
+@media (max-width: 840px) {
+  .hero-parent {
+    flex-direction: column;
+  }
+  .hero-parent {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-parent .hero-item h1 {
+    font-style: 3rem;
+  }
 }
