@@ -1,19 +1,25 @@
 :root {
-  --hero-section: linear-gradient(90deg, #1e38a3, #021048);
+  --gradient-color: linear-gradient(90deg, #1e38a3, #021048);
+  --black: black;
+  --white: white;
+  --blue-1: #1e38a3;
 }
+
 * {
   font-family: "Oxygen", sans-serif;
 }
+
 body {
   background-color: #eeeeee;
-  color: white;
+  color: var(--white);
 }
 
 .navbar {
   padding-left: 38px;
-  background-color: white;
+  background-color: var(--white);
   border-bottom: 2px solid gray;
 }
+
 .navbar-brand img {
   border-radius: 100px;
   width: 50px;
@@ -22,36 +28,38 @@ body {
 
 .nav-link {
   margin-left: 30px;
-  color: #000000;
-}
-.drop-down a {
-  font-weight: bold;
-  color: #000000;
+  color: var(--black);
 }
 
-.nav-link:hover {
-  color: #1e38a3;
+.drop-down a {
+  font-weight: bold;
+  color: var(--black);
 }
+
+.nav-link:hover,
 .dropdown-menu a:hover {
-  color: #1e38a3;
+  color: var(--blue-1);
 }
+
 /* Top Button */
 .top-button a {
   color: #254ff8;
   position: fixed;
   font-size: 50px;
-  bottom: 3%;
-  right: 1%;
+  bottom: 30px;
+  right: 30px;
 }
+
 .top-button a:hover {
   color: #1c39af;
 }
+
 /* Hero Section */
 .hero-parent {
   display: flex;
   height: auto;
   padding: 50px;
-  background: var(--hero-section);
+  background: var(--gradient-color);
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
@@ -94,7 +102,6 @@ body {
 }
 .hero-parent .hero-button-2 {
   width: 150px;
-  height: 45px;
 }
 
 .hero-button-1:hover,
@@ -104,32 +111,32 @@ body {
 }
 /* About */
 .about-parent .about-item {
-  color: #000000;
-  padding: 50px;
+  color: var(--black);
   font-weight: bold;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding: 150px 50px;
 }
 
 .about-parent .about-item h1 {
   font-weight: bold;
 }
-.about-parent .about-item h4 {
+.about-parent .about-item h2 {
   font-weight: bold;
-  color: black;
+  color: var(--black);
 }
-
+.about-parent .about-item p {
+  font-size: 18px;
+}
 /* Skills */
 
 .skills-parent {
   padding-top: 100px;
   padding-bottom: 200px;
   height: auto;
-  background: var(--hero-section);
+  background: var(--gradient-color);
 }
 
 .skills-parent .skills-item h1 {
-  color: white;
+  color: var(--white);
   padding: 50px;
   font-weight: bold;
   text-align: center;
@@ -189,8 +196,7 @@ body {
   margin-top: 54px;
 }
 .skills-card-4 p {
-  margin-bottom: 30px;
-  margin-top: 0;
+  margin: 0 0 30px;
 }
 .skills-card-1:hover,
 .skills-card-2:hover,
@@ -206,7 +212,7 @@ body {
   padding-bottom: 150px;
 }
 .project-parent .project-item h1 {
-  color: black;
+  color: var(--black);
   padding: 50px;
   font-weight: bold;
   text-align: center;
@@ -258,10 +264,10 @@ body {
   border: 0;
   border-radius: 8px;
 }
-.project-button a{
+.project-button a {
   text-decoration: none;
   font-weight: bold;
-  color: white;
+  color: var(--white);
 }
 .project-button:hover {
   background-color: #4963cafe;
@@ -269,10 +275,10 @@ body {
 }
 /* Footer */
 footer {
-  background: var(--hero-section);
+  background: var(--gradient-color);
   padding-top: 50px;
   padding-bottom: 10px;
-  color: white;
+  color: var(--white);
 }
 .container {
   display: flex;
@@ -294,7 +300,7 @@ footer {
 }
 .footer-content a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 .sociol-icons i {
   padding: 10px;
@@ -307,16 +313,39 @@ footer {
 }
 .bottom-footer {
   padding-left: 50px;
+  font-size: small;
+  font-weight: bold;
+}
+.footer-content a:hover {
+  color: #3faffffe;
+  font-size: 21px;
 }
 @media (max-width: 840px) {
   .hero-parent {
-    flex-direction: column;
-  }
-  .hero-parent {
     width: 100%;
+    flex-direction: column;
     text-align: center;
   }
   .hero-parent .hero-item h1 {
     font-style: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-parent .development-img {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+  }
+  .bottom-footer {
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .top-button a {
+    display: none;
   }
 }
