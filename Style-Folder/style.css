@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-  padding-left: 38px;
+  padding-left: 148px;
   background-color: var(--white);
   border-bottom: 2px solid gray;
 }
@@ -58,12 +58,13 @@ body {
 .hero-parent {
   display: flex;
   height: auto;
-  padding: 50px;
+  padding: 70px;
+  padding-left: 160px;
+  padding-right: 160px;
   background: var(--gradient-color);
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
 }
 
 .hero-parent .development-img {
@@ -74,18 +75,17 @@ body {
 
 .hero-parent .hero-item h1 {
   font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 0;
 }
 
 .hero-parent .hero-item p {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 
-.hero-parent .hero-button-1,
-.hero-button-2 {
+.hero-parent .hero-button-1 {
   background-color: #f7f7f8;
   margin-right: 8px;
   margin-top: 10px;
@@ -94,38 +94,37 @@ body {
   border: 0;
   border-radius: 8px;
 }
-.hero-parent .hero-button-1 a,
-.hero-button-2 a {
+.hero-parent .hero-button-1 a {
   text-decoration: none;
   font-weight: bold;
   color: #021149;
 }
-.hero-parent .hero-button-2 {
-  width: 150px;
-}
 
-.hero-button-1:hover,
-.hero-button-2:hover {
+.hero-button-1:hover {
   background-color: rgb(225, 225, 225);
   box-shadow: 0px 0px 5px 1px #f7f7f8;
 }
 /* About */
-.about-parent .about-item {
+.about-parent {
   color: var(--black);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+.about-text h1 {
   font-weight: bold;
-  padding: 150px 50px;
+  font-size: 2.2rem;
+}
+.about-text p {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.about-parent .about-item h1 {
-  font-weight: bold;
-}
-.about-parent .about-item h2 {
-  font-weight: bold;
-  color: var(--black);
-}
-.about-parent .about-item p {
-  font-size: 18px;
-}
 /* Skills */
 
 .skills-parent {
@@ -142,6 +141,7 @@ body {
   text-align: center;
 }
 .skills-container {
+  padding-left: 0;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -151,9 +151,10 @@ body {
 .skills-card-1,
 .skills-card-2,
 .skills-card-3,
-.skills-card-4 {
-  width: 250px;
-  height: 250px;
+.skills-card-4,
+.skills-card-5 {
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px #2b4094;
   background-color: #2b4094;
@@ -184,11 +185,17 @@ body {
   width: 170px;
   height: auto;
 }
+.skills-card-5 img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 40px;
+}
 
 .skills-card-1 p,
 .skills-card-2 p,
 .skills-card-3 p,
-.skills-card-4 p {
+.skills-card-4 p,
+.skills-card-5 p {
   font-weight: bold;
   margin-top: 20px;
 }
@@ -198,12 +205,16 @@ body {
 .skills-card-4 p {
   margin: 0 0 30px;
 }
+.skills-card-5 p {
+  margin: 0;
+}
 .skills-card-1:hover,
 .skills-card-2:hover,
 .skills-card-3:hover,
-.skills-card-4:hover {
-  width: 255px;
-  height: 255px;
+.skills-card-4:hover,
+.skills-card-5:hover {
+  width: 301px;
+  height: 301px;
   box-shadow: 0px 0px 10px 5px #2752ff;
 }
 /* Project */
@@ -227,9 +238,11 @@ body {
 .project-card-1,
 .project-card-2,
 .project-card-3,
-.project-card-4 {
-  width: 250px;
-  height: 250px;
+.project-card-4,
+.project-card-5 {
+  width: 300px;
+  height: 300px;
+  padding-left: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px #2b4094;
   background-color: #2b4094;
@@ -239,26 +252,53 @@ body {
   flex-direction: column;
   font-weight: bold;
 }
+.project-card-1 h2,
+.project-card-2 h2,
+.project-card-3 h2,
+.project-card-4 h2,
+.project-card-5 h2 {
+  font-weight: bold;
+}
 
 .project-card-1 p,
 .project-card-2 p,
 .project-card-3 p,
-.project-card-4 p {
+.project-card-4 p,
+.project-card-5 p {
   text-align: center;
-  padding-left: 10px;
   padding-right: 5px;
 }
 .project-card-1:hover,
 .project-card-2:hover,
 .project-card-3:hover,
-.project-card-4:hover {
-  width: 255px;
-  height: 255px;
+.project-card-4:hover,
+.project-card-5:hover {
+  width: 301px;
+  height: 301px;
   box-shadow: 0px 0px 10px 5px #001668;
+}
+.buttons-1 {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
+.project-button-1 {
+  background-color: #3151cffe;
+  padding-left: 10px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+}
+.project-button-1 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--white);
 }
 
 .project-button {
   background-color: #3151cffe;
+  padding-left: 10px;
   width: 100px;
   height: 40px;
   border: 0;
@@ -269,14 +309,15 @@ body {
   font-weight: bold;
   color: var(--white);
 }
-.project-button:hover {
+.project-button:hover,
+.project-button-1:hover {
   background-color: #4963cafe;
   box-shadow: 0px 0px 5px 1px #5569b8fe;
 }
 /* Footer */
 footer {
   background: var(--gradient-color);
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 10px;
   color: var(--white);
 }
@@ -308,26 +349,59 @@ footer {
 }
 .sociol-icons {
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  font-size: 25px;
 }
 .bottom-footer {
   padding-left: 50px;
+  margin-top: 30px;
   font-size: small;
   font-weight: bold;
+  text-align: center;
 }
 .footer-content a:hover {
   color: #3faffffe;
   font-size: 21px;
 }
 @media (max-width: 840px) {
+  .navbar {
+    padding-left: 0px;
+  }
   .hero-parent {
     width: 100%;
     flex-direction: column;
     text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .hero-parent .hero-item h1 {
+    margin-top: 30px;
     font-style: 3rem;
+  }
+  .about-parent {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .about-text h1 {
+    margin-top: 30px;
+    font-style: 3rem;
+  }
+  .bottom-footer {
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 13px;
   }
 }
 
@@ -337,8 +411,13 @@ footer {
     height: 300px;
     align-items: center;
   }
+  .development1-img {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+  }
   .bottom-footer {
-    padding-left: 50px;
+    padding-left: 0px;
     font-weight: bold;
     font-size: 10px;
   }
