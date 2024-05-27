@@ -421,6 +421,14 @@ footer {
     font-weight: bold;
     font-size: 10px;
   }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-content {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 1000px) {
